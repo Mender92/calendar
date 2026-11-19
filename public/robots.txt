@@ -1,0 +1,5 @@
+
+User-agent: *
+Allow: /
+
+Sitemap: https://calendar-azure-psi.vercel.app/sitemap.xml

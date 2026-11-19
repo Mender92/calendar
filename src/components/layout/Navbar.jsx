@@ -10,20 +10,20 @@ function Navbar() {
   }).format(new Date())
 
   return (
-    <header className="relative z-30 w-full">
-      <div className="mx-auto grid max-w-[1200px] grid-cols-3 items-center px-6 py-6">
+    <header className="w-full bg-calendar-blue">
+      <div className="mx-auto grid max-w-[1200px] grid-cols-[auto_1fr_auto] items-center px-5 py-5 sm:px-6 sm:py-6">
 
         {/* Logo */}
         <a href="/" aria-label="Calendar homepage">
           <img
             src={logo}
             alt="Calendar logo"
-            className="h-14 w-auto"
+            className="h-10 w-auto sm:h-14"
           />
         </a>
 
         {/* Navigation */}
-        <nav className="flex items-center justify-center gap-8 text-sm">
+        <nav className="flex items-center justify-center gap-5 text-xs sm:gap-8 sm:text-sm">
           <a
             href="/"
             className="transition-opacity hover:opacity-60"
