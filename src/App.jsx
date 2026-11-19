@@ -161,9 +161,9 @@ function App() {
         <section
           id="about"
           aria-labelledby="about-heading"
-          className={`grid grid-cols-1 items-center gap-8 px-6 pb-12 pt-28 sm:gap-10 md:h-full md:grid-cols-2 md:gap-12 md:px-6 md:py-10 ${
-            showAbout ? 'grid' : 'hidden md:grid'
-          }`}
+          className={`grid grid-cols-1 items-center gap-8 px-6 pb-12 pt-28 sm:gap-10 md:mx-auto md:h-full md:max-w-[1200px] md:grid-cols-2 md:gap-12 md:px-6 md:py-10 ${
+  showAbout ? 'grid' : 'hidden md:grid'
+}`}
         >
           {/* Text */}
           <div
