@@ -54,7 +54,6 @@ function App() {
       id="home"
       className="relative h-screen overflow-hidden bg-calendar-blue font-outfit text-white"
     >
-
       {/* Navbar - visible only on Home */}
       <div
         className={`absolute inset-x-0 top-0 z-30 transition-all duration-700 ${
@@ -72,7 +71,6 @@ function App() {
           showAbout ? '-translate-y-full' : 'translate-y-0'
         }`}
       >
-
         {/* Hero section */}
         <section className="flex h-full flex-col items-center justify-center px-6">
           <div
@@ -107,28 +105,30 @@ function App() {
         {/* About section */}
         <section
           id="about"
-          className="grid h-full grid-cols-1 items-center gap-8 overflow-hidden px-6 py-8 md:mx-auto md:max-w-[1200px] md:grid-cols-2 md:gap-12 md:py-10"
+          className="grid h-full grid-cols-1 items-center gap-4 overflow-hidden px-6 py-5 sm:gap-6 md:mx-auto md:max-w-[1200px] md:grid-cols-2 md:gap-12 md:px-6 md:py-10"
         >
-
           {/* Text */}
           <div
-            className={`transition-all duration-1000 delay-200 ${
+            className={`flex flex-col items-center text-center transition-all duration-1000 delay-200 md:items-start md:text-left ${
               showAbout
                 ? 'translate-y-0 opacity-100'
                 : 'translate-y-16 opacity-0'
             }`}
           >
-            <h2 className="mb-6 text-4xl font-light leading-tight md:mb-8 md:text-5xl">
+            <h2 className="mb-4 text-3xl font-light leading-tight sm:text-4xl md:mb-8 md:text-5xl">
               A calendar that makes you think.
             </h2>
 
-            <p className="max-w-md text-base font-light leading-relaxed opacity-80">
+            <p className="max-w-md text-sm font-light leading-relaxed opacity-80 sm:text-base">
               A minimalist wall calendar where every detail has its place. A striking blue, crisp white typography and a timeless aesthetic make this calendar more than just a way to keep track of days. It's a statement piece for your space.
             </p>
 
-            <Button href="/order" className="mt-8 md:mt-10">
-              Order now ↗
-            </Button>
+            {/* Desktop CTA */}
+            <div className="hidden md:block">
+              <Button href="/order" className="mt-8 md:mt-10">
+                Order now ↗
+              </Button>
+            </div>
           </div>
 
           {/* Image carousel */}
@@ -145,7 +145,7 @@ function App() {
                 setCurrentImage((currentImage + 1) % images.length)
               }
               aria-label="Show next calendar image"
-              className="relative aspect-[4/5] w-[90%] cursor-pointer overflow-hidden"
+              className="relative aspect-[4/5] w-[65%] max-w-[280px] cursor-pointer overflow-hidden sm:w-[60%] md:w-[90%] md:max-w-none"
             >
               <img
                 key={currentImage}
@@ -162,7 +162,7 @@ function App() {
             </button>
 
             {/* Navigation dots */}
-            <div className="mt-6 flex items-center gap-3">
+            <div className="mt-3 flex items-center gap-3 md:mt-6">
               {images.map((image, index) => (
                 <button
                   key={image.alt}
@@ -177,6 +177,13 @@ function App() {
                   }`}
                 />
               ))}
+            </div>
+
+            {/* Mobile CTA */}
+            <div className="mt-5 md:hidden">
+              <Button href="/order">
+                Order now ↗
+              </Button>
             </div>
           </div>
         </section>
@@ -195,7 +202,6 @@ function App() {
       >
         ↑
       </button>
-
     </main>
   )
 }
