@@ -7,7 +7,7 @@ import SEO from './components/layout/SEO'
 import Order from './pages/Order'
 import Button from './components/layout/ui/Button'
 
-import januaryImage from './assets/images/jan.svg'
+import januaryImage from './assets/images/jan.jpg'
 import livingRoomImage from './assets/images/livingroom.png'
 import officeImage from './assets/images/office.png'
 
@@ -162,8 +162,8 @@ function App() {
           id="about"
           aria-labelledby="about-heading"
           className={`grid grid-cols-1 items-center gap-8 px-6 pb-12 pt-28 sm:gap-10 md:mx-auto md:h-full md:max-w-[1200px] md:grid-cols-2 md:gap-12 md:px-6 md:py-10 ${
-  showAbout ? 'grid' : 'hidden md:grid'
-}`}
+            showAbout ? 'grid' : 'hidden md:grid'
+          }`}
         >
           {/* Text */}
           <div
@@ -208,7 +208,8 @@ function App() {
               onPointerCancel={() => {
                 touchStartX.current = null
               }}
-              className="relative aspect-[4/5] w-[min(78vw,300px)] cursor-grab touch-pan-y overflow-hidden active:cursor-grabbing sm:w-[min(65vw,320px)] md:w-[90%] md:max-w-none"
+              onContextMenu={(event) => event.preventDefault()}
+              className="relative aspect-[4/5] w-[min(78vw,300px)] cursor-grab touch-pan-y overflow-hidden select-none active:cursor-grabbing sm:w-[min(65vw,320px)] md:w-[90%] md:max-w-none"
               aria-label="Calendar image carousel. Swipe left or right to change images."
             >
               <img
@@ -218,6 +219,8 @@ function App() {
                 loading="lazy"
                 decoding="async"
                 draggable="false"
+                onContextMenu={(event) => event.preventDefault()}
+                onDragStart={(event) => event.preventDefault()}
                 className={`absolute inset-0 h-full w-full select-none object-cover ${
                   images[currentImage].border ? 'border border-white' : ''
                 }`}
@@ -277,13 +280,13 @@ function App() {
         }}
         aria-label="Back to top"
         className={`fixed bottom-[calc(env(safe-area-inset-bottom)+1.25rem)] right-5 z-50 flex h-12 w-12 items-center justify-center border border-white bg-white text-2xl font-light text-calendar-blue transition-all duration-500 hover:bg-white/90 md:absolute md:bottom-10 md:right-10 ${
-  showAbout
-    ? 'translate-y-0 opacity-100'
-    : 'pointer-events-none translate-y-4 opacity-0'
-}`}
->
-  ↑
-</button>
+          showAbout
+            ? 'translate-y-0 opacity-100'
+            : 'pointer-events-none translate-y-4 opacity-0'
+        }`}
+      >
+        ↑
+      </button>
     </main>
   )
 }
