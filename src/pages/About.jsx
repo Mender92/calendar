@@ -33,7 +33,7 @@ function Order() {
             <div className="mb-5 h-px w-full bg-white/70" />
 
             <p className="max-w-sm text-sm font-light leading-relaxed opacity-80 sm:text-base">
-              The idea was create a calendar without unnecessary distractions. No visual clutter, no unnecessary details. Just typography, space and a clear purpose. Designed to make you think about time.
+              The idea was create a calendar without unnecessary distractions. No visual clutter, no unnecessary details. Just typography, space and a clear purpose - to make you think about time.
             </p>
           </div>
 
