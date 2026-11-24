@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from 'react'
 import Navbar from './components/layout/Navbar'
 import Footer from './components/layout/Footer'
 import SEO from './components/layout/SEO'
-import Order from './pages/Order'
+import About from './pages/About'
 import Button from './components/layout/ui/Button'
 
 import januaryImage from './assets/images/jan.jpg'
@@ -51,8 +51,8 @@ function App() {
   const currentPath =
     window.location.pathname.replace(/\/+$/, '') || '/'
 
-  if (currentPath === '/order') {
-    return <Order />
+  if (currentPath === '/about') {
+    return <About />
   }
 
   const nextImage = () => {
@@ -157,7 +157,7 @@ function App() {
           </div>
         </section>
 
-        {/* About */}
+        {/* Homepage About section */}
         <section
           id="about"
           aria-labelledby="about-heading"
@@ -180,17 +180,27 @@ function App() {
               A calendar that makes you think.
             </h2>
 
-            <p className="max-w-md text-sm font-light leading-relaxed opacity-80 sm:text-base">
-              A minimalist wall calendar where every detail has its place. A
-              striking blue, crisp white typography and a timeless aesthetic
-              make this calendar more than just a way to keep track of days.
-              It's a statement piece for your space.
-            </p>
+            <div className="max-w-md">
+              <p className="text-sm font-light leading-relaxed opacity-80 sm:text-base">
+                A minimalist wall calendar where every detail has its place. A
+                striking blue, crisp white typography and a timeless aesthetic
+                make this calendar more than just a way to keep track of days.
+                It's a statement piece for your space.
+              </p>
 
+              <p className="mt-5 text-xs font-light tracking-widest uppercase opacity-70 sm:text-sm">
+                · A5 format ·
+              </p>
+            </div>
+
+            {/* Desktop CTA */}
             <div className="hidden md:block">
-              <Button href="/order" className="mt-8 md:mt-10">
-                Order now ↗
-              </Button>
+              <Button
+  href="https://www.instagram.com/domen_kjuder/"
+  className="mt-8 md:mt-10"
+>
+  Get It
+</Button>
             </div>
           </div>
 
@@ -254,9 +264,9 @@ function App() {
 
             {/* Mobile CTA */}
             <div className="mt-8 md:hidden">
-              <Button href="/order">
-                Order now ↗
-              </Button>
+              <Button href="https://www.instagram.com/domen_kjuder/">
+  Get It
+</Button>
             </div>
           </div>
         </section>

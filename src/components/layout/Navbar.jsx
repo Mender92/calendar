@@ -32,10 +32,10 @@ function Navbar() {
           </a>
 
           <a
-            href="/order"
+            href="/about"
             className="transition-opacity hover:opacity-60"
           >
-            Order
+            About
           </a>
         </nav>
 
