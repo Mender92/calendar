@@ -33,7 +33,7 @@ function Order() {
             <div className="mb-5 h-px w-full bg-white/70" />
 
             <p className="max-w-sm text-sm font-light leading-relaxed opacity-80 sm:text-base">
-              The idea was create a calendar without unnecessary distractions. No visual clutter, no unnecessary details. Just typography, space and a clear purpose - to make you think about time.
+              The idea was to create a calendar without unnecessary distractions. No visual clutter, no unnecessary details. Just typography, space and a clear purpose — to make you think about time.
             </p>
           </div>
 
@@ -46,7 +46,7 @@ function Order() {
             <div className="mb-5 h-px w-full bg-white/70" />
 
             <p className="max-w-sm text-sm font-light leading-relaxed opacity-80 sm:text-base">
-              The deep electric blue and crisp white typography is the defining element of the calendar. Blue is often associated with calmness and stability, but this particular shade adds a more energetic character.
+              The deep electric blue and crisp white typography are the defining element of the calendar. Blue is often associated with calmness and stability, but this particular shade adds a more energetic character.
             </p>
           </div>
 
