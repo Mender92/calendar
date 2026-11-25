@@ -1,5 +1,6 @@
 
 import { useState, useEffect, useRef } from 'react'
+import { Analytics } from '@vercel/analytics/react'
 
 import Navbar from './components/layout/Navbar'
 import Footer from './components/layout/Footer'
@@ -52,7 +53,12 @@ function App() {
     window.location.pathname.replace(/\/+$/, '') || '/'
 
   if (currentPath === '/about') {
-    return <About />
+    return (
+      <>
+        <About />
+        <Analytics />
+      </>
+    )
   }
 
   const nextImage = () => {
@@ -196,11 +202,11 @@ function App() {
             {/* Desktop CTA */}
             <div className="hidden md:block">
               <Button
-  href="https://www.instagram.com/domen_kjuder/"
-  className="mt-8 md:mt-10"
->
-  Get It
-</Button>
+                href="https://www.instagram.com/domen_kjuder/"
+                className="mt-8 md:mt-10"
+              >
+                Get It
+              </Button>
             </div>
           </div>
 
@@ -265,8 +271,8 @@ function App() {
             {/* Mobile CTA */}
             <div className="mt-8 md:hidden">
               <Button href="https://www.instagram.com/domen_kjuder/">
-  Get It
-</Button>
+                Get It
+              </Button>
             </div>
           </div>
         </section>
@@ -297,6 +303,8 @@ function App() {
       >
         ↑
       </button>
+
+      <Analytics />
     </main>
   )
 }
