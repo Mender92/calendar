@@ -3,7 +3,7 @@ import Navbar from '../components/layout/Navbar'
 import Footer from '../components/layout/Footer'
 import SEO from '../components/layout/SEO'
 
-function Order() {
+function About() {
   return (
     <main className="flex min-h-screen flex-col bg-calendar-blue font-outfit text-white">
       <SEO
@@ -15,7 +15,6 @@ function Order() {
       <Navbar />
 
       <section className="mx-auto flex w-full max-w-[1200px] flex-1 flex-col justify-center px-6 py-20 sm:px-10 sm:py-24">
-
         {/* Main heading */}
         <h1 className="mb-16 text-center text-4xl font-light leading-tight tracking-tight sm:mb-20 sm:text-6xl md:text-7xl">
           A calendar that makes you think.
@@ -23,7 +22,6 @@ function Order() {
 
         {/* Three columns */}
         <div className="mx-auto grid w-full max-w-[900px] grid-cols-1 gap-12 sm:grid-cols-3 sm:gap-16">
-
           {/* 01 — Simplicity */}
           <div>
             <h2 className="mb-5 text-sm font-normal tracking-wide sm:text-base">
@@ -62,11 +60,10 @@ function Order() {
               A simple everyday object in A5 format, designed to become part of your space.
             </p>
           </div>
-
         </div>
 
         {/* CTA */}
-        <div className="mt-16 flex justify-center sm:mt-20">
+        <div className="mt-16 flex flex-col items-center sm:mt-20">
           <a
             href="https://www.instagram.com/domen_kjuder/"
             target="_blank"
@@ -76,8 +73,11 @@ function Order() {
           >
             Get It
           </a>
-        </div>
 
+          <p className="mt-3 text-center text-xs font-light opacity-70">
+            For orders or questions, send me a DM on Instagram.
+          </p>
+        </div>
       </section>
 
       <Footer />
@@ -85,4 +85,4 @@ function Order() {
   )
 }
 
-export default Order
+export default About

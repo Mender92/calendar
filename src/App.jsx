@@ -193,20 +193,20 @@ function App() {
                 make this calendar more than just a way to keep track of days.
                 It's a statement piece for your space.
               </p>
-
-              <p className="mt-5 text-xs font-light tracking-widest uppercase opacity-70 sm:text-sm">
-                · A5 format ·
-              </p>
             </div>
 
             {/* Desktop CTA */}
-            <div className="hidden md:block">
+            <div className="hidden md:flex md:flex-col md:items-start">
               <Button
                 href="https://www.instagram.com/domen_kjuder/"
                 className="mt-8 md:mt-10"
               >
                 Get It
               </Button>
+
+              <p className="mt-3 text-xs font-light opacity-70">
+                For orders or questions, send me a DM on Instagram.
+              </p>
             </div>
           </div>
 
@@ -269,10 +269,14 @@ function App() {
             </div>
 
             {/* Mobile CTA */}
-            <div className="mt-8 md:hidden">
+            <div className="mt-8 flex flex-col items-center md:hidden">
               <Button href="https://www.instagram.com/domen_kjuder/">
                 Get It
               </Button>
+
+              <p className="mt-3 text-center text-xs font-light opacity-70">
+                For orders or questions, send me a DM on Instagram.
+              </p>
             </div>
           </div>
         </section>
